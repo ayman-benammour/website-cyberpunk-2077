@@ -1,0 +1,660 @@
+/* General */
+*
+{
+    text-decoration: none;
+}
+
+span
+{
+    background: #ff003c !important;
+}
+
+body
+{
+    background: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+iframe
+{
+    width: 100%;
+    height: 100%;
+}
+
+.section
+{
+    display: flex;
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide
+{
+    display: flex;
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.blocInfos
+{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 480px;
+    height: 800px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.8);
+    line-height: 30px;
+}
+
+.blocInfos h1
+{
+    text-align: center;
+    font-size: 80px;
+    font-family: 'Rationale', sans-serif;
+    padding-top: 80px;
+    text-transform: uppercase;
+
+}
+
+.blocInfos p
+{
+    padding-left: 30px;
+    padding-right: 30px; 
+}
+
+.blocInfosRight
+{
+    right: 130px;
+    top: 70px;
+}
+
+.blocInfosLeft
+{
+    left: 100px;
+    top: 70px;
+}
+
+.gifLeft
+{
+    width: 480px;
+    height: 270px;
+    transition: transform 0.8s;
+    z-index: 1;
+}
+
+.gifLeft:hover
+{
+    transform: translate(380px);
+}
+
+.gifRight
+{
+    width: 480px;
+    height: 270px;
+    transition: transform 0.8s;
+    z-index: 1;
+}
+
+.gifRight:hover
+{
+    transform: translate(-380px);
+}
+
+/* Header */
+
+.bgS1
+{
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.header {
+    position: absolute;
+    z-index: 2;
+    background-image: url("../medias/icons/header-home.svg");
+    background-repeat: repeat;
+    width: 100%;
+    height: 60px;
+}
+
+.header .headerContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 50px;
+    z-index: 2;
+}
+
+.header .logoCyberpunk {
+    margin-left: 65px;
+    padding-top: 5px;
+    transition: transform 0.3s;
+}
+
+.header .logoCyberpunk:hover 
+{
+    transform: scale(1.5);
+}
+
+.header .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+}
+
+.header .nav .navSide {
+    z-index: 1;
+    font-family: Rationale, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #82FFF7;
+    text-shadow: 0px 0px 2px #92FFF8;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+} 
+
+.header .nav .li{
+	position: relative;
+	padding: 0 20px;
+	height: 100%;
+	display: flex;
+}
+
+li:before{
+	content: "";
+	position: absolute;
+	height: 33.33%;
+	width: 0;
+	background-color: #ff003c;
+	right: 0;
+	z-index: 0;
+	top:33.33%;
+	transition: all 0.5s;
+}
+
+li:after{
+	content: "";
+	position: absolute;
+	height: 33.33%;
+	width: 0;
+	background-color: #ff003c;
+	left: 0;
+	z-index: -1;
+	bottom: 0;
+	transition: all 0.5s;
+}
+
+a:before{
+    z-index: -1;
+	position: absolute;
+	content: "";
+	height: 33.33%;
+	width: 0;
+	background-color: #ff003c;
+	bottom: 66.66%;
+	left: 0;
+	transition: all 0.5s;
+}
+
+li:hover:before,
+li:hover:after,
+li:hover a:before{
+	width: 100%;
+}
+
+.centered
+{
+    width: 90%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.articles
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 100px; 
+    width: 100%;
+    height: 100%; 
+}
+
+.articles .article
+{
+    display: flex;
+    width: 100%;
+    height: 140px;
+    pointer-events: none;
+    margin-top: 20px;
+}
+
+.articles .article img
+{
+    pointer-events: auto;
+    transition: transform 0.3s;
+}
+
+.articles .article img:hover 
+{
+    transform: scale(1.1);
+}
+
+.articleMore
+{
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    width: 40%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    line-height: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 15px;
+    transition: transform 0.3s, opacity 0.5s;
+}
+
+.article:hover .articleMore
+{
+    opacity: 1;
+    transform: translate(3em,0);
+} 
+
+.ytbHeader
+{
+    background-color: black;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    width: 480px;
+    height: 270px;
+}
+
+/* V (YOU) */
+
+.sl1
+{
+    background-image: url(../medias/images/bgS2Sl1.svg);
+}
+
+.sl2
+{
+    background-image: url(../medias/images/bgS2Sl2.svg);
+}
+
+.fp-slidesNav.fp-bottom
+{
+    bottom: 190px !important;
+    left: 135px !important;
+}
+
+.changeSlide
+{
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    font-family: 'Rationale', sans-serif;
+}
+
+.changeSlide h3
+{
+    padding-bottom: 70px;
+    padding-top: 12px;
+    text-align: center;
+    width: 135px;
+    height: 34px;
+    margin: auto;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    background-image: url(../medias/images/btn.png);
+    background-repeat: no-repeat;
+}
+
+.vLifepath
+{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: auto;
+    height: auto;
+}
+
+.vLifepath img
+{
+    transition: transform 0.3s;
+    margin-top: 15px;
+}
+
+.vLifepath h2
+{
+    padding-top: 12px;
+    text-align: center;
+    width: 135px;
+    height: 34px;
+    margin: auto;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    background-image: url(../medias/images/btn.png);
+    background-repeat: no-repeat;
+}
+
+.vLifepath img:hover 
+{
+    transform: scale(1.1);
+}
+
+.gifBehind2
+{
+    position: absolute;
+    width: 200px;
+    height: 222px;
+    bottom: 0px;
+    right: 80px;
+    padding-bottom: 30px;
+}
+
+/* PARTNERS */
+.s3
+{
+    background-image: url(../medias/images/bgpage3-characters.svg);
+}
+
+.gifBehind3
+{
+    position: absolute;
+    width: 200px;
+    height: 224px;
+    bottom: 0px;
+    left: 80px;
+    padding-bottom: 30px;
+}
+
+/* FIXERS */
+.s4
+{
+    background-image: url(../medias/images/bgpage4-characters.svg);
+}
+
+.gifBehind4
+{
+    position: absolute;
+    width: 200px;
+    height: 156px;
+    bottom: 0px;
+    left: 80px;
+    padding-bottom: 30px;
+}
+
+/* GANGS */
+.s5
+{
+    background-image: url(../medias/images/bgpage5-characters.svg);
+}
+
+.gifBehind5
+{
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    bottom: 0px;
+    right: 100px;
+    padding-bottom: 30px;
+}
+
+.ytbS5
+{
+    background-color: black;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    width: 480px;
+    height: 270px;
+}
+
+/* FOOTER */
+.bgS6
+{
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.s6 h1
+{
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 0,400;
+    color: #ffffff;
+}
+
+.glitchText
+{
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 60px;
+    text-align: center;
+  }
+  
+.glitchText::before,
+.glitchText::after
+{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.glitchText::before
+{
+    color: #FF003C;
+    animation: glitch-effect 3s infinite;
+}
+  
+.glitchText::after
+{
+    color: #40FFFF;
+    animation: glitch-effect 2s infinite;
+}
+
+.middle
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.btnS6
+{
+    position: absolute;
+    left: 43%;
+    bottom: 15%;
+    width: 203px;
+    height: 250px;
+    transition: transform 0.3s;
+}
+
+.btnS6:hover
+{
+    transform: scale(1.1);
+}
+
+.credit
+{
+    position: absolute;
+    padding: 1px 5px 1px 5px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    line-height: 25px;
+    font-size: 12px;
+    bottom: 100px;
+    right: 15px;
+}
+
+.footer 
+{
+    height: 95px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    position: absolute;
+    bottom: 0px;
+    z-index: 2;
+    background-image: url("../medias/icons/footer-home.svg");
+    background-repeat: repeat;
+    width: 100%;
+    padding: 40px 70px 0px 70px;
+}
+
+.footer .legal 
+{
+    position: absolute;
+    display: inline-block;
+    height: 30px;
+    margin-left: 10%;
+    margin-top: 17px;
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    color: #92fff8;
+    font-weight: 400;
+    font-size: 10px;
+}
+
+.footer .legal a
+{
+    text-decoration: underline;
+}
+
+.footer .reseaux 
+{
+    width: 300px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 20;
+}
+
+.footer .reseaux a 
+{
+    padding-left: 0px 10px;
+}
+
+.follow 
+{
+    display: inline-block;
+    cursor: default;
+    padding: 0;
+    margin: 0 0.5em;
+    position: relative;
+    text-align: center;
+}
+
+.follow:hover .label 
+{
+    opacity: 0;
+    transition: opacity 0.2s 0.125s ease-out;
+}
+
+.follow:hover .icon 
+{
+    margin: 0 0;
+}
+
+.label 
+{
+    
+    height: 40px;
+    width: 93px;
+    background-color: #ff003c;
+    clip-path: polygon(0 0, 0 62%, 14px 100%, 100% 100%, 100% 0);
+    line-height: 2rem;
+    position: absolute;
+    font-size: 0.750em;
+    font-family: sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.0816em;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    pointer-events: none;
+    text-transform: uppercase;
+    transition: opacity 0.2s 0.75s ease-out;
+    color: #ffffff;
+}
+
+.icon 
+{
+    background-color: transparent;
+    line-height: 2rem;
+    background-color: transparent;
+    line-height: 2rem;
+    cursor: pointer;
+    display: inline-block;
+    height: 2em;
+    margin: 0 -0.5em;
+    transition: background-color 0.2s ease-out, border-radius 0.2s 0.25s ease-out, margin 0.2s 0.25s ease-out;
+    width: 2em;
+}
+
+.icon:hover
+{
+    background-color: rgba(255, 0, 60, 0.3);
+    clip-path: polygon(51% 0, 95% 25%, 95% 80%, 49% 100%, 5% 80%, 5% 25%);
+    height: 40px;
+    width: 40px;
+}
+
+.icon.first 
+{
+    margin-left: 0;
+}
+
+.icon.last 
+{
+    margin-right: 0;
+}
